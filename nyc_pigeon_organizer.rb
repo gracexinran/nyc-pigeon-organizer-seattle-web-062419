@@ -10,7 +10,7 @@ def nyc_pigeon_organizer(data)
         if !list[name][k]
           list[name][k] = [key.to_s]
         else
-          list[name][k] << [key.to_s]
+          list[name][k] << key.to_s
         end
       end
     end
