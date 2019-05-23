@@ -5,9 +5,12 @@ def nyc_pigeon_organizer(data)
     v.each do |key,value|
       value.each do |name|
         if !list[name]
-          list[name] = [value.to_s]
+          list[name] = {}
+        end
+        if !list[name][key]
+          list[name][key] = [value.to_s]
         else
-          list[name] << [value.to_s]
+          list[name][key] << [value.to_s]
         end
       end
     end
